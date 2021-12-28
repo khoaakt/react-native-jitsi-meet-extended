@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* JitsiMeetExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* JitsiMeetExtended.m */; };
-
+		96EBEF4E2115B4A500BFE51E /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EBEF4C2115B4A400BFE51E /* WebRTC.framework */; };
+		96EBEF4F2115B4A500BFE51E /* JitsiMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EBEF4D2115B4A500BFE51E /* JitsiMeet.framework */; };
+		96EBF0042119CADA00BFE51E /* JitsiMeetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EBF0032119CADA00BFE51E /* JitsiMeetViewController.m */; };
+		96EBF0062119CCFB00BFE51E /* JitsiMeetExtendedNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EBF0052119CCFB00BFE51E /* JitsiMeetExtendedNavigator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+		014A3B5A1C6CF33500B6D375 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -25,110 +26,116 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libJitsiMeetExtended.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJitsiMeetExtended.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-		B3E7B5881CC2AC0600A0062D /* JitsiMeetExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JitsiMeetExtended.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* JitsiMeetExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JitsiMeetExtended.m; sourceTree = "<group>"; };
-
+		014A3B5C1C6CF33500B6D375 /* libJitsiMeetExtended.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJitsiMeetExtended.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		96EBEF4C2115B4A400BFE51E /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
+		96EBEF4D2115B4A500BFE51E /* JitsiMeet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JitsiMeet.framework; sourceTree = "<group>"; };
+		96EBF0012119CA2500BFE51E /* JitsiMeet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JitsiMeet.storyboard; sourceTree = "<group>"; };
+		96EBF0022119CADA00BFE51E /* JitsiMeetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JitsiMeetViewController.h; sourceTree = "<group>"; };
+		96EBF0032119CADA00BFE51E /* JitsiMeetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JitsiMeetViewController.m; sourceTree = "<group>"; };
+		96EBF0052119CCFB00BFE51E /* JitsiMeetExtendedNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JitsiMeetExtendedNavigator.m; sourceTree = "<group>"; };
+		96EBF0072119CD7000BFE51E /* JitsiMeetExtendedNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JitsiMeetExtendedNavigator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		58B511D81A9E6C8500147676 /* Frameworks */ = {
+		014A3B591C6CF33500B6D375 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EBEF4E2115B4A500BFE51E /* WebRTC.framework in Frameworks */,
+				96EBEF4F2115B4A500BFE51E /* JitsiMeet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		134814211AA4EA7D00B7C361 /* Products */ = {
+		014A3B531C6CF33500B6D375 = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libJitsiMeetExtended.a */,
+				96EBF0072119CD7000BFE51E /* JitsiMeetExtendedNavigator.h */,
+				96EBF0052119CCFB00BFE51E /* JitsiMeetExtendedNavigator.m */,
+				96EBF0022119CADA00BFE51E /* JitsiMeetViewController.h */,
+				96EBF0032119CADA00BFE51E /* JitsiMeetViewController.m */,
+				96EBF0012119CA2500BFE51E /* JitsiMeet.storyboard */,
+				96EBEF4D2115B4A500BFE51E /* JitsiMeet.framework */,
+				96EBEF4C2115B4A400BFE51E /* WebRTC.framework */,
+				014A3B5D1C6CF33500B6D375 /* Products */,
 			);
-			name = Products;
 			sourceTree = "<group>";
 		};
-		58B511D21A9E6C8500147676 = {
+		014A3B5D1C6CF33500B6D375 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-
-				B3E7B5881CC2AC0600A0062D /* JitsiMeetExtended.h */,
-				B3E7B5891CC2AC0600A0062D /* JitsiMeetExtended.m */,
-
-				134814211AA4EA7D00B7C361 /* Products */,
+				014A3B5C1C6CF33500B6D375 /* libJitsiMeetExtended.a */,
 			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* JitsiMeetExtended */ = {
+		014A3B5B1C6CF33500B6D375 /* JitsiMeetExtended */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "JitsiMeetExtended" */;
+			buildConfigurationList = 014A3B651C6CF33500B6D375 /* Build configuration list for PBXNativeTarget "JitsiMeetExtended" */;
 			buildPhases = (
-				58B511D71A9E6C8500147676 /* Sources */,
-				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
+				014A3B581C6CF33500B6D375 /* Sources */,
+				014A3B591C6CF33500B6D375 /* Frameworks */,
+				014A3B5A1C6CF33500B6D375 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JitsiMeetExtended;
-			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libJitsiMeetExtended.a */;
+			productName = JitsiMeetExtendedSDK;
+			productReference = 014A3B5C1C6CF33500B6D375 /* libJitsiMeetExtended.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		58B511D31A9E6C8500147676 /* Project object */ = {
+		014A3B541C6CF33500B6D375 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = Facebook;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Marc Shilling";
 				TargetAttributes = {
-					58B511DA1A9E6C8500147676 = {
-						CreatedOnToolsVersion = 6.1.1;
+					014A3B5B1C6CF33500B6D375 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "JitsiMeetExtended" */;
+			buildConfigurationList = 014A3B571C6CF33500B6D375 /* Build configuration list for PBXProject "JitsiMeetExtended" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
-			mainGroup = 58B511D21A9E6C8500147676;
-			productRefGroup = 58B511D21A9E6C8500147676;
+			mainGroup = 014A3B531C6CF33500B6D375;
+			productRefGroup = 014A3B5D1C6CF33500B6D375 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* JitsiMeetExtended */,
+				014A3B5B1C6CF33500B6D375 /* JitsiMeetExtended */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		58B511D71A9E6C8500147676 /* Sources */ = {
+		014A3B581C6CF33500B6D375 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				B3E7B58A1CC2AC0600A0062D /* JitsiMeetExtended.m in Sources */,
-
+				96EBF0042119CADA00BFE51E /* JitsiMeetViewController.m in Sources */,
+				96EBF0062119CCFB00BFE51E /* JitsiMeetExtendedNavigator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		58B511ED1A9E6C8500147676 /* Debug */ = {
+		014A3B631C6CF33500B6D375 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -136,24 +143,18 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -164,7 +165,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -178,7 +178,7 @@
 			};
 			name = Debug;
 		};
-		58B511EE1A9E6C8500147676 /* Release */ = {
+		014A3B641C6CF33500B6D375 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -186,24 +186,18 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -221,62 +215,73 @@
 			};
 			name = Release;
 		};
-		58B511F01A9E6C8500147676 /* Debug */ = {
+		014A3B661C6CF33500B6D375 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/Libraries/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = JitsiMeetExtended;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
-		58B511F11A9E6C8500147676 /* Release */ = {
+		014A3B671C6CF33500B6D375 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/Libraries/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LDFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = JitsiMeetExtended;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "JitsiMeetExtended" */ = {
+		014A3B571C6CF33500B6D375 /* Build configuration list for PBXProject "JitsiMeetExtended" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58B511ED1A9E6C8500147676 /* Debug */,
-				58B511EE1A9E6C8500147676 /* Release */,
+				014A3B631C6CF33500B6D375 /* Debug */,
+				014A3B641C6CF33500B6D375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "JitsiMeetExtended" */ = {
+		014A3B651C6CF33500B6D375 /* Build configuration list for PBXNativeTarget "JitsiMeetExtended" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58B511F01A9E6C8500147676 /* Debug */,
-				58B511F11A9E6C8500147676 /* Release */,
+				014A3B661C6CF33500B6D375 /* Debug */,
+				014A3B671C6CF33500B6D375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+	rootObject = 014A3B541C6CF33500B6D375 /* Project object */;
 }

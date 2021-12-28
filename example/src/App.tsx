@@ -5,10 +5,10 @@ import { JitsiMeetExtended, JitsiMeetView } from 'react-native-jitsi-meet-extend
 
 export default function App() {
   const [showMeet, setShowMeet] = React.useState<Boolean>(true);
-  
-  
+
+
   // React.useEffect(() => {
- 
+
   // }, []);
 
 
@@ -32,7 +32,7 @@ export default function App() {
   const muteAudio = () => {
     JitsiMeetExtended.muteAudio(true)
   }
-  
+
 
   function conferenceTerminated(nativeEvent: any) {
     console.log(nativeEvent)
@@ -57,7 +57,7 @@ export default function App() {
               displayName: "Nikola Tesla"
             }
           }}
-        
+
           onConferenceTerminated={(e: any) => conferenceTerminated(e)}
         />
       )}
