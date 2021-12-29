@@ -75,6 +75,7 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
            jitsiMeetViewInterface.getJitsiMeetView().dispose();
          }
 
+         String token = "";
          String roomId = String.valueOf(Math.random());
          Boolean chatEnabled = true;
          Boolean addPeopleEnabled = true;
@@ -88,6 +89,8 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
          Boolean toolBoxAlwaysVisible = true;
          Boolean meetingPasswordEnabled = true;
          Boolean pipModeEnabled = true;
+         Boolean audioMuted = false;
+         Boolean videoMuted = true;
          URL serverUrl = null;
          try {
            serverUrl = new URL(jitsiServerUrl);
@@ -106,8 +109,23 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
              }
            }
 
+           if (options.hasKey("token") && options.getString("token") != null) {
+             token = options.getString("token");
+           }
+
            if (options.hasKey("roomId") && options.getString("roomId") != null) {
              roomId = options.getString("roomId");
+           }
+
+           if (options.hasKey("audioMuted")) {
+             if (options.getBoolean("audioMuted") == true || (options.getBoolean("audioMuted") == false)) {
+               audioMuted = options.getBoolean("audioMuted");
+             }
+           }
+           if (options.hasKey("videoMuted")) {
+             if (options.getBoolean("videoMuted") == true || (options.getBoolean("videoMuted") == false)) {
+               videoMuted = options.getBoolean("videoMuted");
+             }
            }
 
            if (options.hasKey("chatEnabled")) {
@@ -205,6 +223,8 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
          JitsiMeetConferenceOptions jitsiOptions
            = new JitsiMeetConferenceOptions.Builder()
            .setServerURL(serverUrl)
+           .setToken(token)
+           .setSubject(subject)
            .setRoom(roomId)
            .setUserInfo(_userInfo)
            .setFeatureFlag("chat.enabled", chatEnabled)
@@ -221,8 +241,8 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
            .setFeatureFlag("toolbox.alwaysVisible", toolBoxAlwaysVisible)
            .setFeatureFlag("meeting-password.enabled", meetingPasswordEnabled)
            // Settings for audio and video
-           //.setAudioMuted(true)
-           //.setVideoMuted(true)
+           .setAudioMuted(audioMuted)
+           .setVideoMuted(videoMuted)
            .build();
 
          // Launch the new activity with the given options. The launch() method takes care

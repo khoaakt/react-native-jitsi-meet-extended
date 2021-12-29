@@ -12,14 +12,9 @@ if (isIOS) {
   JitsiMeetViewIOS = requireNativeComponent('JitsiMeetExtendedView');;
   JitsiMeetModuleIOS = NativeModules.JitsiMeetExtendedView;
   const call = JitsiMeetModuleIOS.call;
-  const audioCall = JitsiMeetModuleIOS.audioCall;
-  JitsiMeetModuleIOS.call = (url: any, userInfo: any) => {
+  JitsiMeetModuleIOS.call = (data: any, userInfo: any) => {
     userInfo = userInfo || {};
-    call(url, userInfo);
-  }
-  JitsiMeetModuleIOS.audioCall = (url: any, userInfo: any) => {
-    userInfo = userInfo || {};
-    audioCall(url, userInfo);
+    call(data, userInfo);
   }
 }
 
