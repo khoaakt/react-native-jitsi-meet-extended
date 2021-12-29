@@ -76,6 +76,7 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
          }
 
          String token = "";
+         String subject = "";
          String roomId = String.valueOf(Math.random());
          Boolean chatEnabled = true;
          Boolean addPeopleEnabled = true;
@@ -111,6 +112,10 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
 
            if (options.hasKey("token") && options.getString("token") != null) {
              token = options.getString("token");
+           }
+
+           if (options.hasKey("subject") && options.getString("subject") != null) {
+             subject = options.getString("subject");
            }
 
            if (options.hasKey("roomId") && options.getString("roomId") != null) {
