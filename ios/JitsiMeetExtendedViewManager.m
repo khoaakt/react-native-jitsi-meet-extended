@@ -46,8 +46,8 @@ RCT_EXPORT_METHOD(call:(NSDictionary *)data userInfo:(NSDictionary *)userInfo)
             builder.serverURL = [NSURL URLWithString:[data[@"serverUrl"] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
             builder.room = data[@"roomId"];
             builder.userInfo = _userInfo;
-            builder.audioMuted = userInfo[@"audioMuted"];
-            builder.videoMuted = userInfo[@"videoMuted"];
+            builder.audioMuted = data[@"audioMuted"];
+            builder.videoMuted = data[@"videoMuted"];
             builder.welcomePageEnabled = NO;
             builder.subject = data[@"subject"];
         }];
