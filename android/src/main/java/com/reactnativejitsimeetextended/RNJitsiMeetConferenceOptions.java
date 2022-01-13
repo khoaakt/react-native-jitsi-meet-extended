@@ -52,11 +52,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
   private String token;
 
   /**
-   * Color scheme override, see: https://github.com/jitsi/jitsi-meet/blob/dbedee5e22e5dcf9c92db96ef5bb3c9982fc526d/react/features/base/color-scheme/defaultScheme.js
-   */
-  private Bundle colorScheme;
-
-  /**
    * Feature flags. See: https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/flags/constants.js
    */
   private Bundle featureFlags;
@@ -90,10 +85,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
     return token;
   }
 
-  public Bundle getColorScheme() {
-    return colorScheme;
-  }
-
   public Bundle getFeatureFlags() {
     return featureFlags;
   }
@@ -123,7 +114,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
     private String subject;
     private String token;
 
-    private Bundle colorScheme;
     private Bundle featureFlags;
 
     private Boolean audioMuted;
@@ -181,19 +171,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
     }
 
     /**
-     * Sets the color scheme override so the app is themed. See:
-     * https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/color-scheme/defaultScheme.js
-     * for the structure.
-     * @param colorScheme - A color scheme to be applied to the app.
-     * @return - The {@link Builder} object itself so the method calls can be chained.
-     */
-    public Builder setColorScheme(Bundle colorScheme) {
-      this.colorScheme = colorScheme;
-
-      return this;
-    }
-
-    /**
      * Indicates the conference will be joined with the microphone muted.
      * @param muted - Muted indication.
      * @return - The {@link Builder} object itself so the method calls can be chained.
@@ -222,19 +199,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
      */
     public Builder setVideoMuted(boolean videoMuted) {
       this.videoMuted = videoMuted;
-
-      return this;
-    }
-
-    /**
-     * Sets the welcome page enabled / disabled. The welcome page lists recent meetings and
-     * calendar appointments and it's meant to be used by standalone applications. Defaults to
-     * false.
-     * @param enabled - Whether the welcome page should be enabled or not.
-     * @return - The {@link Builder} object itself so the method calls can be chained.
-     */
-    public Builder setWelcomePageEnabled(boolean enabled) {
-      this.featureFlags.putBoolean("welcomepage.enabled", enabled);
 
       return this;
     }
@@ -275,7 +239,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
       options.room = this.room;
       options.subject = this.subject;
       options.token = this.token;
-      options.colorScheme = this.colorScheme;
       options.featureFlags = this.featureFlags;
       options.audioMuted = this.audioMuted;
       options.audioOnly = this.audioOnly;
@@ -294,7 +257,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
     room = in.readString();
     subject = in.readString();
     token = in.readString();
-    colorScheme = in.readBundle();
     featureFlags = in.readBundle();
     userInfo = new RNJitsiMeetUserInfo(in.readBundle());
     byte tmpAudioMuted = in.readByte();
@@ -314,10 +276,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
     }
 
     props.putBundle("flags", featureFlags);
-
-    if (colorScheme != null) {
-      props.putBundle("colorScheme", colorScheme);
-    }
 
     Bundle config = new Bundle();
 
@@ -383,7 +341,6 @@ public class RNJitsiMeetConferenceOptions implements Parcelable {
     dest.writeString(room);
     dest.writeString(subject);
     dest.writeString(token);
-    dest.writeBundle(colorScheme);
     dest.writeBundle(featureFlags);
     dest.writeBundle(userInfo != null ? userInfo.asBundle() : new Bundle());
     dest.writeByte((byte) (audioMuted == null ? 0 : audioMuted ? 1 : 2));

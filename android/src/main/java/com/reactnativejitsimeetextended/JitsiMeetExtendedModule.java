@@ -245,6 +245,7 @@ public class JitsiMeetExtendedModule extends ReactContextBaseJavaModule {
            .setFeatureFlag("toolbox.enabled", toolBoxEnabled)
            .setFeatureFlag("toolbox.alwaysVisible", toolBoxAlwaysVisible)
            .setFeatureFlag("meeting-password.enabled", meetingPasswordEnabled)
+           .setFeatureFlag("welcomepage.enabled", false)
            // Settings for audio and video
            .setAudioMuted(audioMuted)
            .setVideoMuted(videoMuted)

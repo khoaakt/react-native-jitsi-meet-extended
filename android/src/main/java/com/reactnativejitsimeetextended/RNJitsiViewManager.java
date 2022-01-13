@@ -220,6 +220,7 @@ public class RNJitsiViewManager extends SimpleViewManager<RNJitsiMeetView>  {
         .setFeatureFlag("toolbox.enabled", toolBoxEnabled)
         .setFeatureFlag("toolbox.alwaysVisible", toolBoxAlwaysVisible)
         .setFeatureFlag("meeting-password.enabled", meetingPasswordEnabled)
+        .setFeatureFlag("welcomepage.enabled", false)
         // Settings for audio and video
         //.setAudioMuted(true)
         //.setVideoMuted(true)
