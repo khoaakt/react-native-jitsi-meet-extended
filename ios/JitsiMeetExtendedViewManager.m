@@ -48,7 +48,6 @@ RCT_EXPORT_METHOD(call:(NSDictionary *)data userInfo:(NSDictionary *)userInfo)
             builder.userInfo = _userInfo;
             builder.audioMuted = data[@"audioMuted"];
             builder.videoMuted = data[@"videoMuted"];
-            builder.welcomePageEnabled = NO;
             builder.subject = data[@"subject"];
         }];
         [jitsiMeetView join:options];
