@@ -49,7 +49,10 @@ RCT_EXPORT_METHOD(call:(NSDictionary *)data userInfo:(NSDictionary *)userInfo)
             builder.audioMuted = data[@"audioMuted"];
             builder.videoMuted = data[@"videoMuted"];
             builder.subject = data[@"subject"];
-            builder.featureFlags = data[@"featureFlags"];
+            [builder setFeatureFlag:@"invite.enabled" withBoolean:NO];
+            [builder setFeatureFlag:@"add-people.enabled" withBoolean:NO];
+            [builder setFeatureFlag:@"help.enabled" withBoolean:NO];
+            [builder setFeatureFlag:@"pip.enabled" withBoolean:NO];
         }];
         [jitsiMeetView join:options];
     });
